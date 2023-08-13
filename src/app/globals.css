@@ -11,4 +11,35 @@ body {
   font-family: Helvetica, sans-serif;
   background-color: rgba(0, 0, 0, 1);
   color: rgba(255, 255, 255, 1);
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  /* background-image: url("./../../../../public/planet.png"); */
+  background-image: url("./../../public//planet.png");
+
+  background-size: auto 74%;
+  background-position: 0 70%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  @media (max-width: 860px) {
+    background-position-x: -200px;
+  }
+
+  @media (max-width: 640px) {
+    background-position-x: -265px;
+  }
+}
+
+main {
+  flex-grow: 1;
+  margin: 0 auto;
+  padding-left: 100px;
+
+  @media (max-width: 640px) {
+    padding-left: 48px;
+  }
 }

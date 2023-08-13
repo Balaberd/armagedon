@@ -1,0 +1,22 @@
+.AsteroidList {
+  
+}
+
+.title {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 8px;
+}
+
+.list {
+  margin-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
