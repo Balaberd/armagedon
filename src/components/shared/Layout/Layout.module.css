@@ -3,16 +3,6 @@
 
   display: flex;
   flex-direction: column;
-}
-
-.content {
-  flex-grow: 1;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding-left: 100px;
 
   background-image: url("./../../../../public/planet.png");
   background-size: auto 74%;
@@ -25,8 +15,28 @@
   }
 
   @media (max-width: 640px) {
-    padding-left: 48px;
     background-position-x: -265px;
   }
+}
 
+.content {
+  flex-grow: 1;
+  margin: 0 auto;
+  padding-left: 100px;
+
+  @media (max-width: 640px) {
+    padding-left: 48px;
+  }
+}
+
+.title {
+  width: 400px;
+  
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.subtitle {
+  margin-top: 8px;
 }

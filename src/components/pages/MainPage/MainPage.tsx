@@ -1,26 +1,29 @@
+import { FC } from "react";
 import { Layout } from "@/components/shared";
-import styles from "./MainPage.module.css";
 import { AsteroidCard } from "@/components/block";
+import { IAsteroidResponse } from "@/lib/api/types";
+import styles from "./MainPage.module.css";
 
-export const MainPage = () => {
+interface Props {
+  data: IAsteroidResponse;
+}
+
+export const MainPage: FC<Props> = ({ data }) => {
+  const subtitle = <div className={styles.subtitle}>subtitle</div>;
+
+  const date = Object.keys(data.near_earth_objects)[0];
+  const asteroids = data.near_earth_objects[date];
+
   return (
-    <Layout>
-      <div className={styles.content}>
-        <div>
-          <h3 className={styles.title}>Ближайшие подлёты астероидов</h3>
-          <div className={styles.subtitle}>subtitle</div>
-        </div>
-        <div className={styles.list}>
-          <AsteroidCard />
-          <AsteroidCard />
-          <AsteroidCard />
-          <AsteroidCard />
-          <AsteroidCard />
-          <AsteroidCard />
-          <AsteroidCard />
-          <AsteroidCard />
-          <AsteroidCard />
-        </div>
+    <Layout
+      contentTitle="Ближайшие подлёты астероидов"
+      contentSubtitle={subtitle}
+      contentWrapperClassNames={styles.content}
+    >
+      <div className={styles.list}>
+        {asteroids.map((asteroid) => {
+          return <AsteroidCard asteroid={asteroid} key={asteroid.id} />;
+        })}
       </div>
     </Layout>
   );
