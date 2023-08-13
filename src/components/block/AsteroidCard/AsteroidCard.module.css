@@ -1,0 +1,106 @@
+.AsteroidCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.date {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.descriptionBlock {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.size {
+  line-height: 24px;
+
+  position: relative;
+
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 8px;
+}
+
+.size::before {
+  content: "";
+
+  position: absolute;
+  bottom: -3.5px;
+  right: -1px;
+
+  border-top: 3px solid transparent;
+  border-left: 5px solid #CCC;
+  border-bottom: 3px solid transparent;
+}
+
+.size::after {
+  content: "";
+
+  position: absolute;
+  bottom: -3.5px;
+  left: -1px;
+
+  border-top: 3px solid transparent;
+  border-right: 5px solid #CCC;
+  border-bottom: 3px solid transparent;
+}
+
+.name {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  position: relative;
+}
+
+.name::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.radius {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.actionBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button {
+  padding: 2px 11px;
+  border-radius: 16px;
+
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 20px;
+  letter-spacing: 1px;
+
+  color: rgba(248, 102, 0, 1);
+  background-color: rgba(248, 102, 0, 0.15);
+
+  cursor: pointer;
+
+  transition: .5s;
+}
+
+.button:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(248, 102, 0, 1);
+}
+
+.danger {
+  font-size: 14px;
+  line-height: 20px;
+  color: (227, 229, 229, 1)
+}

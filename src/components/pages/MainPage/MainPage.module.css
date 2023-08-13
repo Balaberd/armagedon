@@ -1,0 +1,21 @@
+.content {
+  width: 400px;
+}
+
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.subtitle {
+  margin-top: 8px;
+}
+
+.list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
