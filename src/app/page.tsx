@@ -8,5 +8,10 @@ export default async function Home() {
   const date = Object.keys(data.near_earth_objects)[0];
   const asteroids = data.near_earth_objects[date];
 
-  return <AsteroidList asteroidsList={asteroids} />;
+  return (
+    <AsteroidList
+      nextAsteroidsListLink={data.links.next}
+      asteroidsList={asteroids}
+    />
+  );
 }

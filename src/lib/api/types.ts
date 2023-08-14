@@ -3,6 +3,8 @@ interface IAsteroideDiameter {
   estimated_diameter_max: number;
 }
 
+export type TSizeType = "kilometers" | "lunar";
+
 export interface IAsteroid {
   links: {
     self: string;

@@ -17,7 +17,6 @@ body {
   display: flex;
   flex-direction: column;
 
-  /* background-image: url("./../../../../public/planet.png"); */
   background-image: url("./../../public//planet.png");
 
   background-size: auto 74%;
